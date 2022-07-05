@@ -1,0 +1,19 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch ThreadS1",
+            "request": "launch",
+            "mainClass": "application.ThreadS1",
+            "projectName": "temp_294674a2"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "application.Main",
+            "vmArgs": "--module-path \"C:\\Program Files\\Java\\javafx-sdk-17.0.0.1\\lib\" --add-modules javafx.controls,javafx.fxml"
+        }
+    ]
+}

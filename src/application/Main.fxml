@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="854.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Main">
+   <top>
+      <Pane prefHeight="50.0" prefWidth="854.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="startButton" mnemonicParsing="false" onAction="#onClickStart" text="Start">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="pauseButton" layoutX="82.0" mnemonicParsing="false" onAction="#onClickPause" text="Pause">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <TextField fx:id="textBox" layoutX="200.0" layoutY="6.0" prefHeight="39.0" prefWidth="525.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <CheckBox fx:id="syncCheck" layoutX="748.0" layoutY="8.0" mnemonicParsing="false" text="Sync">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </CheckBox>
+         </children>
+      </Pane>
+   </top>
+   <center>
+      <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#00b16b" height="430.0" layoutX="-122.0" stroke="BLACK" strokeType="INSIDE" width="854.0" />
+            <ImageView fx:id="ashige" fitHeight="173.0" fitWidth="200.0" layoutX="-50.0" layoutY="204.0" scaleX="-1.0">
+               <image>
+                  <Image url="@../../img/ashi.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="kurige" fitHeight="173.0" fitWidth="200.0" layoutX="-50.0" layoutY="54.0" scaleX="-1.0">
+               <image>
+                  <Image url="@../../img/kuri.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="win" fitHeight="300.0" fitWidth="300.0" layoutX="-500.0">
+               <image>
+                  <Image url="@../../img/win.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="ken" fitHeight="300.0" fitWidth="300.0" layoutX="-500.0">
+               <image>
+                  <Image url="@../../img/ken.png" />
+               </image>
+            </ImageView>
+            <!--<Circle fx:id="redCircle" fill="RED" layoutX="50.0" layoutY="140.0" radius="30.0" stroke="BLACK" strokeType="INSIDE" />-->
+            <!--<Circle fx:id="blueCircle" fill="BLUE" layoutX="50.0" layoutY="290.0" radius="30.0" stroke="BLACK" strokeType="INSIDE" />-->
+            <Text fx:id="textFinish2" fill="BLUE" layoutX="26.0" layoutY="160.0" stroke="YELLOW" strokeType="OUTSIDE" strokeWidth="3.0" textAlignment="CENTER" wrappingWidth="500.0">
+               <font>
+                  <Font size="72.0" />
+               </font>
+            </Text>
+            <Text fx:id="textFinish1" fill="RED" layoutX="26.0" layoutY="160.0" stroke="YELLOW" strokeType="OUTSIDE" strokeWidth="3.0" textAlignment="CENTER" wrappingWidth="500.0">
+               <font>
+                  <Font size="72.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+   </center>
+   <left>
+      <Pane prefHeight="200.0" prefWidth="122.0" BorderPane.alignment="CENTER">
+         <children>
+            <Text fx:id="away1" fill="WHITE" layoutX="20.0" layoutY="150.0" stroke="BLACK" strokeType="OUTSIDE" text="Thread1">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Text>
+            <Text fx:id="away2" fill="WHITE" layoutX="20.0" layoutY="300.0" stroke="BLACK" strokeType="OUTSIDE" text="Thread2">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+   </left>
+   <bottom>
+      <Pane prefHeight="75.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="129.0" fitWidth="200.0" layoutX="655.0" layoutY="-37.0" scaleX="-1.0">
+               <image>
+                  <Image url="@../../img/dkdk.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="129.0" fitWidth="200.0" layoutY="-44.0">
+               <image>
+                  <Image url="@../../img/wkwk.png" />
+               </image>
+            </ImageView>
+            <Line endX="550.0" layoutX="122.0" layoutY="32.5" startX="50.0" />
+            <Line endX="50.0" endY="10.0" layoutX="122.0" layoutY="32.5" startX="50.0" startY="-10.0" />
+            <Text layoutX="122.0" layoutY="32.5" strokeType="OUTSIDE" strokeWidth="0.0" text="0" x="45.0" y="30.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Text layoutX="122.0" layoutY="32.5" strokeType="OUTSIDE" strokeWidth="0.0" text="500" x="285.0" y="30.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Text layoutX="122.0" layoutY="32.5" strokeType="OUTSIDE" strokeWidth="0.0" text="1000" x="530.0" y="30.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Line endX="550.0" endY="10.0" layoutX="122.0" layoutY="32.5" startX="550.0" startY="-10.0" />
+            <Line endX="300.0" endY="10.0" layoutX="122.0" layoutY="32.5" startX="300.0" startY="-10.0" />
+         </children>
+      </Pane>
+   </bottom>
+   <right>
+      <Pane prefHeight="355.0" prefWidth="180.0" BorderPane.alignment="CENTER">
+         <children>
+            <Text fx:id="away3" fill="WHITE" layoutX="45.0" layoutY="70.0" stroke="BLACK" strokeType="OUTSIDE" text="ゴールまで">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Text>
+            <Text fx:id="text1" layoutX="65.0" layoutY="150.0" stroke="WHITE" strokeType="OUTSIDE" text="1000m" textAlignment="CENTER">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+            <Text fx:id="text2" layoutX="65.0" layoutY="300.0" stroke="WHITE" strokeType="OUTSIDE" text="1000m" textAlignment="CENTER">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+   </right>
+</BorderPane>
