@@ -2,11 +2,11 @@
 大学の授業で制作した競馬ゲームです
 
 ## 授業目標
-スレッドやGUIを用いたJavaプログラミングをできるようになること
+スレッドやGUIを用いたJavaプログラミングをできるようになること  
 Java FXを用いたプログラミングを行い、制作物を発表する
 
 ## 制作物
-スレッドの動作を可視化したモノを作成した
+スレッドの動作を可視化したモノを作成した  
 各スレッドにおいてカウントアップを行い、数値に対応して馬の位置を動かした
 
 ### 大まかな動作内容
@@ -40,19 +40,19 @@ Java FXを用いたプログラミングを行い、制作物を発表する
     * Syncが押されている場合は値が揃うように一定時間スレッドを停止する
 
 ### 改善点
-本プログラムは提出期限に間に合わすため、実装を諦めた箇所がある
+本プログラムは提出期限に間に合わすため、実装を諦めた箇所がある  
 * 動作の間隔を一定にするため、処理時間や回数を設定したが、連続して動作を行ったりPause時間が長くなると処理が停止するようになっている
 * 同期処理について、syncronizedを用いた処理を行いたかったが、アニメーションスレッドと上手く同期できなかったためsleepで妥協している
 
 ## 参考
-Java15の導入とVSCode環境設定\n
+Java15の導入とVSCode環境設定  
 https://qiita.com/kazushi47/items/58e00d0ea6513e067a02
 
-JavaFX15を導入してVSCodeでGUI開発を行う\n
+JavaFX15を導入してVSCodeでGUI開発を行う  
 https://qiita.com/kazushi47/items/66fbd4a6b3db8e7c2851
 
-VSCode + JavaFX + SceneBuilder\n
+VSCode + JavaFX + SceneBuilder  
 https://danpapa-hry.hateblo.jp/entry/2020/02/21/234915
 
-軽Lab\n
+軽Lab  
 http://krr.blog.shinobi.jp/
