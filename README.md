@@ -1,18 +1,45 @@
-## Getting Started
+# ThreadHorceRace
+大学の授業で制作した競馬ゲームです
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+## 授業目標
+スレッドやGUIを用いたJavaプログラミングをできるようになること
+Java FXを用いたプログラミングを行い、制作物を発表する
 
-## Folder Structure
+## 制作物
+スレッドの動作を可視化したモノを作成した
+各スレッドにおいてカウントアップを行い、数値に対応して馬の位置を動かした
 
-The workspace contains two folders by default, where:
+### 大まかな動作内容
+1. 複数のスレッド(th1, th2)を作成し、100までカウントアップさせる
+2. 100に到達した場合その結果を返し、対応した馬を1マス進める
+3. 両方の馬がゴールについた時に処理を終了し、結果を表示する
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+### 詳細な動作
+* Startが押されたとき
+    * 各種変数やオブジェクトを初期化し、スレッドの作成や馬の移動を行うactionメソッドを開始する
+    * 既にスタートが押されている場合はその旨を表示し、処理に変更を与えないよう工夫した(変数による条件分岐)
+    * なお、Syncにチェックが入っているか(同期を行うか)はactionの開始前に確認する
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+* Pauseが押されたとき
+    * 変数pkeyに+= 1し、その値によって異なる処理を行う
+        * pkey % 2 == 1のとき
+            動作を一時停止し、その旨を表示する
+            なお、実際に動作を停止する処理はactionメソッドにて行う
+        * pkey % 2 == 0のとき
+            動作を再開し、その旨を表示する
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+* actionメソッド
+    * スレッドを作成し、カウントアップを行うrunメソッドを呼び出す
+    * その返り値に基づき、対応する馬の座標を変更する
+    * どちらかの馬がゴールした場合、その旨を表示する
+    * 両方の馬がゴールした場合、その旨と各馬の差を表示する
+    * なお、Pauseが押された場合、適切に一時停止や再開等の処理を行う
 
-## Dependency Management
+* runメソッド
+    * 作成された各スレッドについてカウントアップを行い、先に終了したスレッドを返す
+    * Syncが押されている場合は値が揃うように一定時間スレッドを停止する
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+### 改善点
+本プログラムは提出期限に間に合わすため、実装を諦めた箇所がある
+* 動作の間隔を一定にするため、処理時間や回数を設定したが、連続して動作を行ったりPause時間が長くなると処理が停止するようになっている
+* 同期処理について、syncronizedを用いた処理を行いたかったが、アニメーションスレッドと上手く同期できなかったためsleepで妥協している
