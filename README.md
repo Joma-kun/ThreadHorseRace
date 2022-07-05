@@ -1,6 +1,9 @@
 # ThreadHorceRace
 大学の授業で制作した競馬ゲームです
 
+* 動作映像
+https://youtu.be/PS6c9L2hMAY
+
 ## 授業目標
 スレッドやGUIを用いたJavaプログラミングをできるようになること  
 Java FXを用いたプログラミングを行い、制作物を発表する
@@ -56,3 +59,6 @@ https://danpapa-hry.hateblo.jp/entry/2020/02/21/234915
 
 軽Lab  
 http://krr.blog.shinobi.jp/
+
+いらすとや
+https://www.irasutoya.com/
