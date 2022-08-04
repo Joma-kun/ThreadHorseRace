@@ -1,8 +1,7 @@
 # ThreadHorceRace
 大学の授業で制作した競馬ゲームです
 
-* 動作映像
-https://youtu.be/PS6c9L2hMAY
+* [動作映像](https://youtu.be/PS6c9L2hMAY)
 
 ## 授業目標
 スレッドやGUIを用いたJavaプログラミングをできるようになること  
